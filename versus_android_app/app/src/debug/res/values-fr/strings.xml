@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contre Débogue</string>
+
+    <string name="endpoint_preview">Aperçu</string>
+    <string name="endpoint_server_address">Addresse de Serveur</string>
+    <string name="endpoint_server_address_hint">Addresse</string>
+    <string name="endpoint_server">Serveur</string>
+</resources>

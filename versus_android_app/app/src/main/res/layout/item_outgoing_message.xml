@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="32dp"
+    android:paddingRight="8dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:gravity="end"
+    tools:background="@color/messagingBackground"
+    >
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/outgoingMessageColor"
+        android:textSize="@dimen/message_text_size"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="8dp"
+        android:background="@drawable/item_message_outgoing"
+        tools:text="Trump sucks!"
+        />
+
+</LinearLayout>

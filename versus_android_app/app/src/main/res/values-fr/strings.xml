@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Contre</string>
+
+    <string name="drawer_open">Ouvrez le Drawer</string>
+    <string name="drawer_close">Fermez le Drawer</string>
+
+    <string name="splash_button_login">Connexion avec Facebook</string>
+    <string name="login_message">Logging in&#8230;</string>
+
+    <string name="title_inbox">@string/app_name</string>
+    <string name="title_archive">Conversations Passées</string>
+    <string name="title_arbitration">Juge des Conversations</string>
+    <string name="title_categories">Catégories</string>
+
+    <string name="drawer_item_inbox">Conversations Actives</string>
+    <string name="drawer_item_archive">Conversations Passées</string>
+    <string name="drawer_item_arbitration">Juge des Conversations</string>
+    <string name="drawer_item_logout">Deconnexion</string>
+
+    <string name="user_energy">%d</string>
+    <string name="user_win">G:</string>
+    <string name="user_loss">P:</string>
+    <string name="user_win_loss">%d</string>
+
+    <string name="topic_vs">c.</string>
+    <string name="topic_wait">Veuillez patienter&#8230;</string>
+
+    <string name="inbox_pending">A la cherche d\'un adversaire</string>
+    <string name="inbox_matched">Défendre %s</string>
+
+    <string name="arbitration_instructions">Passez en revue la conversation suivante et donnez un point à tous les bons messages.</string>
+    <string name="arbitration_start">Commencez</string>
+    <string name="arbitration_submit">Fin</string>
+
+    <string name="arbitration_empty_message">Désolé, nous n\'avons pas une conversation pour vous de juger. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="arbitration_empty_button">OK</string>
+
+    <string name="messaging_load_earlier">Chargez les messages précédents</string>
+    <string name="messaging_pending">A la cherche d\'un adversaire</string>
+
+    <string name="notification_vs">%1$s c. %2$s</string>
+
+    <string name="empty_view_no_network">Il y a une probleme avec votre connexion. Vérifiez vos paramètres de réseau et réessayez, s\'il vous plait.</string>
+    <string name="empty_view_no_conversations_active">Vous n\'avez pas des conversations active.</string>
+    <string name="empty_view_no_conversations_past">Vous n\'avez pas des conversations passées.</string>
+    <string name="empty_view_matched_conversation">Un adversaire a été trouvé. Commencez la conversation!</string>
+    <string name="empty_view_start_conversation">Commencez une conversation</string>
+    <string name="empty_view_fab_conversation_prompt">Cliquez ici pour faire une nouveau conversation</string>
+    <string name="empty_view_empty_arbitration">Hum, cette conversation n\'a pas des messages. Voici un energie gratuit pour votre effort.</string>
+    <string name="empty_view_get_energy">Obtenez un energie</string>
+
+    <string name="login_error_versus">Désolé, nous ne pouvions pas vous connecter à Contre. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="login_error_permissions">Désolé, mais vous ne nous laissez connecter à Facebook. Réessayez, s\'il vous plait.</string>
+    <string name="login_error_facebook">Connexion en utilisant Facebook impossible. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="login_error_ok">OK</string>
+
+    <string name="main_logout_message">Voulez-vous vous déconnecter?</string>
+    <string name="main_logout_yes">Oui</string>
+    <string name="main_logout_no">Non</string>
+
+    <string name="arbitration_submit_message">Merci pour juger cette conversation.  Voici un energie pour juger.</string>
+    <string name="arbitration_submit_ok">OK</string>
+
+    <string name="conversation_timeout_message">Le temps est écoulé!</string>
+    <string name="conversation_timeout_ok">OK</string>
+
+    <string name="topic_fetch_error_message">Il y a une problem en essayant d\'obtenir un sujet. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="topic_fetch_error_ok">OK</string>
+
+    <string name="queue_error_message">Nous ne pouvions pas vous ajouter à la queue maintenant. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="queue_error_insufficient_energy">Vous n\'avez pas assez d\'energie. Réessayez plus tard, s\'il vous plait.</string>
+    <string name="queue_error_ok">OK</string>
+
+</resources>

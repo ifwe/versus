@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splashBackground"
+    >
+
+    <include
+        layout="@layout/view_endpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+    <ImageView
+        android:id="@+id/logo_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/ic_logo"
+        tools:src="@drawable/ic_logo"/>
+
+        <RelativeLayout
+            android:layout_width="288dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:drawableStart="@drawable/wrapper_ic_facebook"
+                android:drawableLeft="@drawable/wrapper_ic_facebook"
+                android:drawablePadding="16dp"
+                android:text="@string/splash_button_login"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@color/facebook"
+                android:visibility="invisible"
+                style="@style/Button.Facebook"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

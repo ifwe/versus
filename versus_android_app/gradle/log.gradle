@@ -1,0 +1,43 @@
+def dumpSourceSets(Object... sourceSet) {
+    sourceSet.each {
+        println "-- start:Dumping source set"
+        println "Name: $it.name"
+        println "Aidl: $it.aidl"
+        println "Assets: $it.assets"
+        println "Res: $it.res"
+        println "Java: $it.java"
+        println "Manifest: $it.manifest"
+        println "CompileConfigName: $it.compileConfigurationName"
+        println "PackageConfigName: $it.packageConfigurationName"
+        println "ProvidedConfigName: $it.providedConfigurationName"
+        println "-- end:Dumping source set\n"
+    }
+}
+
+def dumpConfigurations(Object... configs) {
+    configs.each {
+        println "-- start:Dumping configuration"
+        println "Name: $it.name"
+        println "Visible: $it.visible"
+        println "Transitive: $it.transitive"
+        println "ExtendsFrom: $it.extendsFrom"
+        println "Description: $it.description"
+        println "Hierarchy: $it.hierarchy"
+        println "Files: $it.files"
+        println "Dependencies: $it.dependencies"
+        println "-- end:Dumping configuration\n"
+    }
+}
+
+def dump(Object... o) {
+    o.each {
+        println it.properties.sort { it.key }.collect { it }.join('\n') + "\n"
+    }
+}
+
+// Export methods by turning them into closures
+ext {
+    dumpSourceSets = this.&dumpSourceSets
+    dumpConfigurations = this.&dumpConfigurations
+    dump = this.&dump
+}

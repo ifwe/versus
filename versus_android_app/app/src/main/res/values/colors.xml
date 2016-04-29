@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="cloud">#f7f7f7</color>
+    <color name="slate">#828c90</color>
+    <color name="slate_20">#33828c90</color>
+    <color name="gunmetal">#2c2827</color>
+    <color name="black">#000000</color>
+    <color name="energy">#f8e71c</color>
+    <color name="facebook">#3b5998</color>
+    <color name="sea_blue">#09639f</color>
+    <color name="sea_blue_20">#3309639f</color>
+    <color name="navy">#075081</color>
+    <color name="salmon">#ff5c5c</color>
+    <color name="salmon_20">#33ff5c5c</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorPrimary">@color/sea_blue</color>
+    <color name="colorPrimaryDark">@color/navy</color>
+    <color name="colorAccent">@color/salmon</color>
+    <color name="colorText">@color/slate</color>
+
+    <color name="splashBackground">@color/gunmetal</color>
+    <color name="userViewBackground">@color/sea_blue</color>
+
+    <color name="menuIconColor">@color/slate</color>
+    <color name="shelfBackground">@color/white</color>
+
+    <color name="dividerColor">@color/slate</color>
+
+    <color name="messagingBackground">#1a2c2827</color>
+    <color name="incomingMessageColor">@color/gunmetal</color>
+    <color name="outgoingMessageColor">@color/white</color>
+
+    <color name="progress_overlay">#aa000000</color>
+
+    <array name="progressColors">
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <color name="btn_default_mtrl_text">@color/white</color>
+    <color name="btn_fb_blue_mtrl_text">@color/white</color>
+</resources>

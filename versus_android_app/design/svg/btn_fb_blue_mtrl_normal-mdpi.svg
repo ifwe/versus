@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26"
+   height="36"
+   viewBox="0 0 26 36"
+   version="1.1"
+   id="svg4320"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="btn_fb_blue_mtrl_normal-mdpi.svg">
+  <metadata
+     id="metadata4356">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>btn_default_mtrl_normal-mdpi</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1694"
+     inkscape:window-height="933"
+     id="namedview4354"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-nodes="true"
+     inkscape:zoom="16.857143"
+     inkscape:cx="0.73728822"
+     inkscape:cy="14"
+     inkscape:window-x="432"
+     inkscape:window-y="432"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="button-bg">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4358" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="17,30"
+       id="guide4360" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="4,29"
+       id="guide4362" />
+  </sodipodi:namedview>
+  <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4322">btn_default_mtrl_normal-mdpi</title>
+  <desc
+     id="desc4324">Created with Sketch.</desc>
+  <defs
+     id="defs4326">
+    <filter
+       x="-0.5"
+       y="-0.5"
+       width="2"
+       height="2"
+       filterUnits="objectBoundingBox"
+       id="filter-1">
+      <feOffset
+         dx="0"
+         dy="2"
+         in="SourceAlpha"
+         result="shadowOffsetOuter1"
+         id="feOffset4329" />
+      <feGaussianBlur
+         stdDeviation="1"
+         in="shadowOffsetOuter1"
+         result="shadowBlurOuter1"
+         id="feGaussianBlur4331" />
+      <feColorMatrix
+         values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.168 0"
+         in="shadowBlurOuter1"
+         type="matrix"
+         result="shadowMatrixOuter1"
+         id="feColorMatrix4333" />
+      <feMerge
+         id="feMerge4335">
+        <feMergeNode
+           in="shadowMatrixOuter1"
+           id="feMergeNode4337" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode4339" />
+      </feMerge>
+    </filter>
+    <rect
+       id="path-2"
+       x="0"
+       y="0"
+       width="18"
+       height="24"
+       rx="2" />
+  </defs>
+  <g
+     id="Page-1-Copy"
+     sketch:type="MSPage"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     transform="translate(2,6)">
+    <g
+       id="Blue-Raised-Button"
+       sketch:type="MSArtboardGroup"
+       transform="translate(-605,-93)"
+       style="filter:url(#filter-1)">
+      <g
+         id="btn_default_mtrl_normal-mdpi"
+         sketch:type="MSLayerGroup"
+         transform="translate(607,93)">
+        <g
+           id="button-bg">
+          <use
+             sketch:type="MSShapeGroup"
+             xlink:href="#path-2"
+             id="use4346"
+             style="fill:#3b5998;fill-rule:evenodd;fill-opacity:1"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#path-2"
+             id="use4348"
+             style="fill:none"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#path-2"
+             id="use4350"
+             style="fill:none"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#path-2"
+             id="use4352"
+             style="fill:none"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

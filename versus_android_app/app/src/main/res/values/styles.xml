@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_default_mtrl</item>
+        <item name="android:textColor">@color/btn_default_mtrl_text</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:minWidth">128dp</item>
+    </style>
+
+    <style name="Button.Facebook" parent="Button">
+        <item name="android:background">@drawable/btn_fb_blue_mtrl</item>
+    </style>
+
+    <style name="Button.FlexWidth" parent="Button">
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+</resources>

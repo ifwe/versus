@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Versus</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string name="splash_button_login">Log in with Facebook</string>
+    <string name="login_message">Logging in&#8230;</string>
+
+    <string name="title_inbox">@string/app_name</string>
+    <string name="title_archive">Past Conversations</string>
+    <string name="title_arbitration">Judge Conversations</string>
+    <string name="title_categories">Categories</string>
+
+    <string name="drawer_item_inbox">Current Conversations</string>
+    <string name="drawer_item_archive">Past Conversations</string>
+    <string name="drawer_item_arbitration">Judge Conversations</string>
+    <string name="drawer_item_logout">Sign Out</string>
+
+    <string name="user_energy">%d</string>
+    <string name="user_win">W:</string>
+    <string name="user_loss">L:</string>
+    <string name="user_win_loss">%d</string>
+
+    <string name="topic_vs">vs</string>
+    <string name="topic_wait">Please wait&#8230;</string>
+
+    <string name="inbox_pending">Waiting for opponent</string>
+    <string name="inbox_matched">Defending %s</string>
+
+    <string name="arbitration_instructions">Review the following conversation\nand give a thumbs up\nto all the good points.</string>
+    <string name="arbitration_start">Start</string>
+    <string name="arbitration_submit">Submit</string>
+
+    <string name="arbitration_empty_message">Sorry, we\'ve run out of conversations for you to judge. Please try again later.</string>
+    <string name="arbitration_empty_button">OK</string>
+
+    <string name="messaging_load_earlier">Load earlier messages</string>
+    <string name="messaging_pending">Waiting for opponent</string>
+
+    <string name="notification_vs">%1$s vs %2$s</string>
+
+    <string name="empty_view_no_network">There seems to be an issue with your network connection. Please check your network settings and try again later.</string>
+    <string name="empty_view_no_conversations_active">You don\'t have any active conversations.</string>
+    <string name="empty_view_no_conversations_past">You don\'t have any finished conversations.</string>
+    <string name="empty_view_matched_conversation">You\'ve been matched! Start debating now!</string>
+    <string name="empty_view_start_conversation">Start a Conversation</string>
+    <string name="empty_view_fab_conversation_prompt">Click here to start a new conversation</string>
+    <string name="empty_view_empty_arbitration">Hmm, this conversation seems be empty. Here\'s a free energy for your trouble.</string>
+    <string name="empty_view_get_energy">Get Energy</string>
+
+    <string name="login_error_versus">Sorry, we couldn\'t log you into Versus. Please try again later.</string>
+    <string name="login_error_permissions">Sorry, you didn\'t allow us to connect with Facebook. Please try again and authorize Versus.</string>
+    <string name="login_error_facebook">Sorry, there was an error connecting with Facebook. Please try again later.</string>
+    <string name="login_error_ok">OK</string>
+
+    <string name="main_logout_message">Are you sure you want to sign out of Versus?</string>
+    <string name="main_logout_yes">Yes</string>
+    <string name="main_logout_no">No</string>
+
+    <string name="arbitration_submit_message">Thanks for judging this conversation. Here\'s one energy as a reward.</string>
+    <string name="arbitration_submit_ok">OK</string>
+
+    <string name="conversation_timeout_message">Time\'s up!</string>
+    <string name="conversation_timeout_ok">OK</string>
+
+    <string name="topic_fetch_error_message">Something went wrong trying to get a topic. Please try again later.</string>
+    <string name="topic_fetch_error_ok">OK</string>
+
+    <string name="queue_error_message">We couldn\'t add you to the queue right now. Please try again later.</string>
+    <string name="queue_error_insufficient_energy">You don\'t have enough energy. Please try again later.</string>
+    <string name="queue_error_ok">OK</string>
+</resources>

@@ -1,0 +1,20 @@
+{
+    "name": "Versus",
+    "author": "ifwe-interns",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start" : "node --use-strict server.js"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.15.0",
+        "express": "^4.13.4",
+        "pg": "4.5.2",
+        "body-parser": "1.15.0",
+        "request": "2.69.0",
+        "pubnub": "3.14.5"
+    }
+}

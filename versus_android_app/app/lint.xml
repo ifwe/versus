@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lint>
+    <!-- Errors -->
+    <issue id="HardcodedText" severity="error" />
+    <issue id="ShowToast" severity="error" />
+    <issue id="ExportedService" severity="error" />
+    <issue id="ExtraText" severity="error" />
+    <issue id="InefficientWeight" severity="error" />
+    <issue id="MenuTitle" severity="error" />
+    <issue id="MissingSuperCall" severity="error" />
+    <issue id="NestedWidgets" severity="error" />
+    <issue id="NestedScrolling" severity="error" />
+    <issue id="DisableBaselineAlignment" severity="error" />
+
+    <issue id="Assert" severity="error" />
+    <issue id="Registered" severity="error" />
+    <issue id="DuplicateIncludedIds" severity="error" />
+    <issue id="TypographyEllipsis" severity="error" />
+    <issue id="IconDipSize" severity="error" />
+    <issue id="IconDuplicatesConfig" severity="error" />
+    <issue id="SimpleDateFormat" severity="error" />
+    <issue id="ObsoleteLayoutParam" severity="error" />
+    <issue id="IconDuplicates" severity="error">
+        <ignore path="**/ic_clear.png" />
+        <ignore path="**/ic_done.png" />
+        <ignore path="**/ic_small_hex_users.png" />
+    </issue>
+    <issue id="UseValueOf" severity="error" />
+    <issue id="StateListReachable" severity="error" />
+    <issue id="SpUsage" severity="error" />
+
+    <!-- Warnings -->
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="UnusedResources" severity="warning">
+        <ignore path="src/main/res/flags/**" />
+    </issue>
+
+    <!-- Ignore -->
+    <issue id="InvalidPackage, InflateParams" severity="Ignore" />
+
+    <!-- Ignore RTL until we ready to support it-->
+    <issue id="RtlHardcoded, RtlSymmetry" severity="Ignore" />
+
+    <!--
+    As of Android 2.3 (Gingerbread), this optimization is performed
+    automatically by Dalvik, so there is no need to change your code;
+    this is only relevant if you are targeting older versions of Android.
+    -->
+    <issue id="FieldGetter" severity="Ignore" />
+
+</lint>

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<script src="http://cdn.pubnub.com/pubnub-3.14.2.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	</head>
+   	<body>
+    	<div>
+            <input id="channel" placeholder="enter the channel"/><button id="enter" type="button">Enter Room</button>
+    	</div>
+
+        <div>
+            <input id="input" placeholder="you-chat-here"/>
+        </div>
+
+    	Chat Output
+    	<div id="box"></div>
+    	<script>
+    		function init(channel) {
+    		 
+    		    pubnub = PUBNUB({                          
+    		        publish_key   : 'pub-c-8028947a-380c-420e-be14-cc9216642edd',
+    		        subscribe_key : 'sub-c-78d1252e-e658-11e5-a4f2-0619f8945a4f'
+    		    });
+
+    		    pubnub.subscribe({                                     
+    		        channel : channel,
+    		        connect : pub,
+    		        callback : function(text) {
+    		        	$("#box")[0].innerHTML += "<br>" + JSON.stringify(text);
+    		        },
+    		    });
+    		 
+    		    function pub() {
+                    pubnub.history({
+                        channel: channel,
+                        callback: function(m){
+                            for (var i = 0; i < m[0].length; i++) {
+                                $("#box")[0].innerHTML += "<br>" + JSON.stringify(m[0][i]);
+                            }  
+                        },
+                        count: 100, // 100 is the default
+                        reverse: false // false is the default
+                    });
+    		    }
+
+    		    $("#input").keypress(function(e) {
+    		    	// debugger;
+					if(e.which == 13) {
+					    pubnub.publish({                                    
+	    		            channel : channel,
+	    		            message : {
+                                message : $("#input").val(),
+                                userId : -1
+                            },
+	    		            callback: function(m){ 
+                                $("#input").val(""); 
+                            }
+	    		       	});
+					}
+				});
+    		}
+
+            $("#enter").click(function(e) {
+                init($("#channel").val());
+            });
+    	</script>
+   	</body>
+</html>

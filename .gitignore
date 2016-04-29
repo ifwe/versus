@@ -1,0 +1,17 @@
+# Optional npm cache directory
+*.npm
+*.log
+config.js
+
+node_modules
+build/Release
+.DS_Store
+
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/build
+/captures
+keystore.jks

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "item_message_incoming*.*",
+    "qualifiers": [],
+    "stretch": { "x": [ [ 16, 31] ], "y": [ [ 9, 20] ] },
+    "content": { "x": [ [ 12, 35] ], "y": [ [ 1, 23] ] }
+  },
+
+  {
+    "name": "item_message_outgoing*.*",
+    "qualifiers": [],
+    "stretch": { "x": [ [4, 20] ], "y": [ [9, 20] ] },
+    "content": { "x": [ [1, 24] ], "y": [ [1, 23] ] }
+  },
+
+  {
+    "name": "item_judge_*.*",
+    "qualifiers": [],
+    "stretch": { "x": [ [4, 20] ], "y": [ [4, 20] ] },
+    "content": { "x": [ [1, 24] ], "y": [ [1, 24] ] }
+  },
+
+  {
+    "name": "btn_default_*.*",
+    "qualifiers": [],
+    "stretch": { "x": [ [10, 14] ], "y": [ [12, 25] ] },
+    "content": { "x": [ [10, 14] ], "y": [ [12, 25] ] }
+  }
+]

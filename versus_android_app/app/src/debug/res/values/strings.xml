@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Versus Debug</string>
+
+    <string name="endpoint_preview">Preview</string>
+    <string name="endpoint_server_address">Server Address</string>
+    <string name="endpoint_server_address_hint">Address</string>
+    <string name="endpoint_server">Server</string>
+</resources>

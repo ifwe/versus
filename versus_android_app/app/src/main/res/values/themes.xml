@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/gunmetal</item>
+        <item name="android:buttonStyle">@style/Button</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="SlideAnimation" parent="AppTheme">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_exit</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="SlideAnimationTheme" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/SlideAnimation</item>
+    </style>
+
+    <style name="LoginTheme" parent="AppTheme.NoActionBar">
+        <item name="colorControlNormal">@color/gunmetal</item>
+    </style>
+
+    <style name="ConversationsTheme" parent="SlideAnimationTheme">
+        <item name="colorAccent">@color/sea_blue</item>
+    </style>
+</resources>

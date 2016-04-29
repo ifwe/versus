@@ -1,0 +1,36 @@
+def gitHash() {
+    return "git -C ${projectDir} log -n1 --format=%h".execute().text.trim()
+}
+
+def gitBranch(hash) {
+    return "git -C ${projectDir} branch -r --contains ${hash}".execute().text.trim()
+}
+
+def gitBranchId() {
+    def hash = gitHash()
+    def branch = gitBranch(hash).split('/')[-1].trim() ?: 'SNAPSHOT'
+    return "${branch}-${hash}"
+}
+
+def mergeSourceSets(dst, Object... srcs) {
+    srcs.each {
+        dst.aidl.srcDirs += it.aidl.srcDirs
+        dst.assets.srcDirs += it.assets.srcDirs
+        dst.res.srcDirs += it.res.srcDirs
+        dst.java.srcDirs += it.java.srcDirs
+    }
+}
+
+def isJenkins() {
+    return "true".equals(System.getenv('JENKINS')) || "true".equals(System.getenv('CI'))
+}
+
+// Export methods by turning them into closures
+ext {
+    gitHash = this.&gitHash
+    gitBranch = this.&gitBranch
+    gitBranchId = this.&gitBranchId
+
+    isJenkins = this.&isJenkins
+    mergeSourceSets = this.&mergeSourceSets
+}

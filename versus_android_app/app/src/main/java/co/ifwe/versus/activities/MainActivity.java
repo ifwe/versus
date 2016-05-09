@@ -42,7 +42,6 @@ import co.ifwe.versus.adapters.ShelfAdapter;
 import co.ifwe.versus.fragments.ConversationListFragment;
 import co.ifwe.versus.models.QueueResult;
 import co.ifwe.versus.models.Result;
-import co.ifwe.versus.models.Status;
 import co.ifwe.versus.models.User;
 import co.ifwe.versus.provider.Projection;
 import co.ifwe.versus.provider.VersusContract;
@@ -165,7 +164,6 @@ public class MainActivity extends VersusActivity
 
         FragmentUtils.addSingle(this, ConversationListFragment.createState(true), R.id.content_frame);
         getSupportLoaderManager().initLoader(WIN_LOSS_LOADER_ID, null, this);
-        mConversationsService.getConversationList(Status.values(), true, new StubCallback<>());
     }
 
     @OnItemClick(R.id.left_drawer)

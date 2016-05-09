@@ -67,7 +67,7 @@ public class ConversationHistoryFragment extends VersusFragment {
 
         if (args.containsKey(ARG_CONVERSATION)) {
             mConversation = args.getParcelable(ARG_CONVERSATION);
-            getActivity().setTitle(mConversation.getTopic().getTitle());
+            getActivity().setTitle(mConversation.getTitle(getActivity()));
         } else {
             throw new IllegalArgumentException("Conversation is required");
         }

@@ -1,7 +1,6 @@
 package co.ifwe.versus.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import java.util.List;
 import co.ifwe.versus.R;
 import co.ifwe.versus.models.ChatMessage;
 import co.ifwe.versus.models.Conversation;
-import co.ifwe.versus.viewholders.ArbitrationViewHolder;
 import co.ifwe.versus.viewholders.MessageViewHolder;
 import co.ifwe.versus.viewholders.MessageViewType;
 

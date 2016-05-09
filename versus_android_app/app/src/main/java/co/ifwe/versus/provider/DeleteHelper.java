@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.UriMatcher;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.text.TextUtils;
 
 import java.util.ArrayList;
 

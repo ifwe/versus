@@ -11,6 +11,7 @@
     <string name="title_archive">Conversations Passées</string>
     <string name="title_arbitration">Juge des Conversations</string>
     <string name="title_categories">Catégories</string>
+    <string name="title_conversation">%1$s c. %2$s</string>
 
     <string name="drawer_item_inbox">Conversations Actives</string>
     <string name="drawer_item_archive">Conversations Passées</string>
@@ -70,5 +71,10 @@
     <string name="queue_error_message">Nous ne pouvions pas vous ajouter à la queue maintenant. Réessayez plus tard, s\'il vous plait.</string>
     <string name="queue_error_insufficient_energy">Vous n\'avez pas assez d\'energie. Réessayez plus tard, s\'il vous plait.</string>
     <string name="queue_error_ok">OK</string>
+
+    <string name="conversation_win">GAGNE</string>
+    <string name="conversation_loss">PERDU</string>
+    <string name="conversation_draw">MATCH NUL</string>
+    <string name="conversation_pending">EN ATTENTE</string>
 
 </resources>

@@ -43,7 +43,7 @@
     <LinearLayout
         android:layout_width="240dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="start|left"
         android:background="@color/shelfBackground"
         android:orientation="vertical"
         >
@@ -67,7 +67,7 @@
                 android:id="@+id/left_drawer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="start"
+                android:layout_gravity="start|left"
                 android:choiceMode="singleChoice"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0dp"
@@ -87,10 +87,14 @@
             android:layout_height="wrap_content"
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
-            android:fadeScrollbars="false"
+            android:scrollbars="none"
             android:layout_gravity="bottom"
             />
 
     </LinearLayout>
+
+    <include
+        layout="@layout/view_right_drawer"
+        />
 
 </android.support.v4.widget.DrawerLayout>

@@ -10,7 +10,7 @@ import co.ifwe.versus.models.QueueResult;
 import co.ifwe.versus.models.Status;
 
 public interface ConversationsService extends ICasprService {
-    void getConversationList(Status[] statuses, boolean pending, Callback<List<Conversation>> callback);
+    void getConversationList(List<Status> statuses, boolean pending, Callback<List<Conversation>> callback);
 
     void addToQueue(int topicId, String side, Callback<QueueResult> callback);
 

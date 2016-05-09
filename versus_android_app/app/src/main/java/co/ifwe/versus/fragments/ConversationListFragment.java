@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -91,14 +92,12 @@ public class ConversationListFragment extends VersusFragment implements
             mNewConvoFab.setVisibility(View.GONE);
         }
 
-        Status[] statuses;
+        List<Status> statuses = new ArrayList<>();
         if (mIsActive) {
-            statuses = new Status[1];
-            statuses[0] = Status.ACTIVE;
+            statuses.add(Status.ACTIVE);
         } else {
-            statuses = new Status[2];
-            statuses[0] = Status.REVIEW;
-            statuses[1] = Status.DONE;
+            statuses.add(Status.REVIEW);
+            statuses.add(Status.DONE);
         }
         mSwipeRefreshLayout.setColorSchemeResources(R.color.sea_blue);
         mSwipeRefreshLayout.setOnRefreshListener(() -> {

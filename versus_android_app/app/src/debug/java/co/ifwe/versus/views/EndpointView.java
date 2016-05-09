@@ -56,7 +56,9 @@ public class EndpointView extends TextView {
         FragmentManager fm = activity.getSupportFragmentManager();
         ServerAddressDialogFragment dialog = new ServerAddressDialogFragment();
         dialog.setServer(mServer);
-        dialog.setServerAddressSelectListener((serverAddress) -> setNewEndpoint(serverAddress));
+        dialog.setServerAddressSelectListener((sslEnabled, serverAddress, port) -> {
+            setNewEndpoint(serverAddress);
+        });
 
         dialog.show(fm, "endpoint_dialog_fragment");
     }

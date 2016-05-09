@@ -1,6 +1,7 @@
 package co.ifwe.versus.models;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.os.Parcel;
@@ -11,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Locale;
 
-import co.ifwe.versus.VersusApplication;
+import co.ifwe.versus.R;
 import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.utils.CursorHelper;
 
@@ -116,8 +117,8 @@ public class Topic implements Parcelable, Content {
         return mCategoryId;
     }
 
-    public String getTitle() {
-        return mSideA + " vs " + mSideB;
+    public String getTitle(Context context) {
+        return context.getString(R.string.title_conversation, mSideA, mSideB);
     }
 
     @Override

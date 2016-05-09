@@ -1,6 +1,7 @@
 package co.ifwe.versus.models;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.os.Parcel;
@@ -9,13 +10,10 @@ import android.text.TextUtils;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.UUID;
-
-import co.ifwe.versus.adapters.ListItemModel;
 import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.utils.CursorHelper;
 
-public class Conversation implements ListItemModel, Parcelable, Content {
+public class Conversation implements Parcelable, Content {
 
     @SerializedName("room_name")
     private String mRoomName;
@@ -132,9 +130,8 @@ public class Conversation implements ListItemModel, Parcelable, Content {
         return !TextUtils.isEmpty(mUserAId) && !TextUtils.isEmpty(mUserBId);
     }
 
-    @Override
-    public String getListItemText() {
-        return getTopic().getTitle();
+    public String getTitle(Context context) {
+        return mTopic.getTitle(context);
     }
 
     public static Conversation fromCursor(Cursor cursor) {

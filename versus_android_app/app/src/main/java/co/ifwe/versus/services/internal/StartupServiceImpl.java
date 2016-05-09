@@ -2,8 +2,6 @@ package co.ifwe.versus.services.internal;
 
 import javax.inject.Inject;
 
-import co.ifwe.versus.models.Status;
-import co.ifwe.versus.services.ConversationsService;
 import co.ifwe.versus.services.StartupService;
 import co.ifwe.versus.services.TopicsService;
 import co.ifwe.versus.services.VersusService;

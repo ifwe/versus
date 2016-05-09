@@ -131,14 +131,12 @@ public final class VersusContract {
             return selection.toString();
         }
 
-        public static String buildNotInSelection(List<Conversation> conversations, Status... statuses) {
+        public static String buildNotInSelection(List<Conversation> conversations, List<Status> statuses) {
             StringBuilder selection = new StringBuilder();
             selection.append(STATUS).append(" IN (");
-            for (int i = 0; i < statuses.length; i ++) {
-                selection.append("\"");
-                selection.append(statuses[i].getCode());
-                selection.append("\"");
-                if (i < statuses.length - 1) {
+            for (int i = 0; i < statuses.size(); i ++) {
+                selection.append("\"").append(statuses.get(i).getCode()).append("\"");
+                if (i < statuses.size() - 1) {
                     selection.append(", ");
                 }
             }
@@ -146,9 +144,7 @@ public final class VersusContract {
             selection.append(" AND ");
             selection.append(ROOM_NAME).append(" NOT IN (");
             for (int i = 0; i < conversations.size(); i ++) {
-                selection.append("\"");
-                selection.append(conversations.get(i).getRoomName());
-                selection.append("\"");
+                selection.append("\"").append(conversations.get(i).getRoomName()).append("\"");
                 if (i < conversations.size() - 1) {
                     selection.append(", ");
                 }

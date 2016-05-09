@@ -8,7 +8,6 @@ import com.crashlytics.android.Crashlytics;
 import com.tagged.caspr.CasprAdapter;
 import com.tagged.caspr.CasprUtils;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.inject.Inject;

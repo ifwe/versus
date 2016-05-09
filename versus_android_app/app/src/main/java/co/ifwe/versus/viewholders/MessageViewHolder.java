@@ -11,7 +11,6 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import co.ifwe.versus.R;
-import co.ifwe.versus.adapters.MessageAdapterV2;
 import co.ifwe.versus.models.ChatMessage;
 
 public class MessageViewHolder extends RecyclerView.ViewHolder {

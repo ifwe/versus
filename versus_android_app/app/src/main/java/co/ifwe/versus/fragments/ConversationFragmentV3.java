@@ -300,7 +300,7 @@ public class ConversationFragmentV3 extends VersusFragment implements
         ActionBar actionbar = activity.getSupportActionBar();
         String side = TextUtils.equals(mConversation.getUserAId(), mUserId) ?
                 mConversation.getTopic().getSideA() : mConversation.getTopic().getSideB();
-        actionbar.setTitle(mConversation.getTopic().getTitle());
+        actionbar.setTitle(mConversation.getTitle(getActivity()));
         actionbar.setSubtitle(getString(R.string.inbox_matched, side));
     }
 

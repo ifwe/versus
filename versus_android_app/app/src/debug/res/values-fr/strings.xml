@@ -6,4 +6,5 @@
     <string name="endpoint_server_address">Addresse de Serveur</string>
     <string name="endpoint_server_address_hint">Addresse</string>
     <string name="endpoint_server">Serveur</string>
+    <string name="endpoint_port">Port</string>
 </resources>

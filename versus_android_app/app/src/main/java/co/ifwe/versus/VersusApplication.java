@@ -6,8 +6,6 @@ import com.crashlytics.android.Crashlytics;
 import com.facebook.FacebookSdk;
 import com.facebook.stetho.Stetho;
 
-import java.util.Locale;
-
 import co.ifwe.versus.dagger.Injector;
 import co.ifwe.versus.dagger.Modules;
 import io.fabric.sdk.android.Fabric;

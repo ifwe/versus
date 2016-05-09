@@ -2,15 +2,9 @@ package co.ifwe.versus.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 import co.ifwe.versus.R;
 import co.ifwe.versus.models.Conversation;

@@ -16,7 +16,7 @@ import co.ifwe.versus.dagger.Injector;
 
 public abstract class VersusService extends CasprService implements ICasprService {
 
-    private static final String TAG = VersusService.class.getSimpleName();
+    private static final String TAG = VersusService.class.getCanonicalName();
 
     @Inject
     protected CasprAdapter mCasprAdapter;

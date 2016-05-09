@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import co.ifwe.versus.AppConfig;
 import co.ifwe.versus.R;
 import co.ifwe.versus.utils.ViewUtils;
 import co.ifwe.versus.views.ShelfItem;

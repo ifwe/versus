@@ -8,7 +8,6 @@ import com.facebook.Profile;
 import com.tagged.caspr.callback.Callback;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -20,8 +19,8 @@ import co.ifwe.versus.models.QueueResult;
 import co.ifwe.versus.models.Status;
 import co.ifwe.versus.models.UpdateScoreRequest;
 import co.ifwe.versus.provider.VersusContract;
-import co.ifwe.versus.services.SubscribeService;
 import co.ifwe.versus.services.ConversationsService;
+import co.ifwe.versus.services.SubscribeService;
 import co.ifwe.versus.services.VersusService;
 import co.ifwe.versus.utils.ContentOperationsBuilder;
 import retrofit2.Call;
@@ -42,25 +41,22 @@ public class ConversationsServiceImpl extends VersusService implements Conversat
     }
 
     @Override
-    public void getConversationList(Status[] statuses, boolean pending, Callback<List<Conversation>> callback) {
+    public void getConversationList(List<Status> statuses, boolean pending, Callback<List<Conversation>> callback) {
         Profile profile = Profile.getCurrentProfile();
         AccessToken token = AccessToken.getCurrentAccessToken();
-        List<Status> states = Arrays.asList(statuses);
         Call<List<Conversation>> request = mConversationsApi.getConversations(profile.getId(),
-                token.getToken(), states, pending);
+                token.getToken(), statuses, pending);
         try {
             Response<List<Conversation>> response = request.execute();
             if (response.code() == 200) {
-                Status[] statusFilter = statuses;
-                if (pending) {
-                    statusFilter = Arrays.copyOf(statuses, statuses.length + 1);
-                    statusFilter[statusFilter.length - 1] = Status.PENDING;
+                if (pending && !statuses.contains(Status.PENDING)) {
+                    statuses.add(Status.PENDING);
                 }
 
                 ContentOperationsBuilder builder = new ContentOperationsBuilder(getContentResolver());
                 builder.bulkInsert(VersusContract.Conversations.CONTENT_URI, response.body());
                 builder.delete(VersusContract.Conversations.CONTENT_URI,
-                        VersusContract.Conversations.buildNotInSelection(response.body(), statusFilter), null);
+                        VersusContract.Conversations.buildNotInSelection(response.body(), statuses), null);
                 builder.apply();
                 mSubscribeService.subscribeChatChannels(response.body());
                 callback.onSuccess(response.body());

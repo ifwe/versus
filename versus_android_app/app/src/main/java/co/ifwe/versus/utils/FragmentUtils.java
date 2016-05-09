@@ -288,7 +288,7 @@ public final class FragmentUtils {
         T listener = findListener(fragment, listenerClass);
         if (listener == null) {
             final String caller = fragment.getActivity() + " or " + fragment.getParentFragment();
-            throw new ClassCastException(caller + " must implement " + listenerClass.getSimpleName());
+            throw new ClassCastException(caller + " must implement " + listenerClass.getCanonicalName());
         } else {
             return listener;
         }

@@ -1,7 +1,5 @@
 package co.ifwe.versus.provider;
 
-import co.ifwe.versus.models.Conversation;
-
 public interface Table {
 
     interface Categories {

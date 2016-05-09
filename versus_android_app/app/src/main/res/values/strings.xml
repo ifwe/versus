@@ -11,6 +11,7 @@
     <string name="title_archive">Past Conversations</string>
     <string name="title_arbitration">Judge Conversations</string>
     <string name="title_categories">Categories</string>
+    <string name="title_conversation">%1$s vs %2$s</string>
 
     <string name="drawer_item_inbox">Current Conversations</string>
     <string name="drawer_item_archive">Past Conversations</string>
@@ -70,4 +71,9 @@
     <string name="queue_error_message">We couldn\'t add you to the queue right now. Please try again later.</string>
     <string name="queue_error_insufficient_energy">You don\'t have enough energy. Please try again later.</string>
     <string name="queue_error_ok">OK</string>
+
+    <string name="conversation_win">WIN</string>
+    <string name="conversation_loss">LOSS</string>
+    <string name="conversation_draw">DRAW</string>
+    <string name="conversation_pending">PENDING</string>
 </resources>

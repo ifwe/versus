@@ -78,7 +78,7 @@ public class ArbitrationFragment extends VersusFragment {
 
         if (args.containsKey(ARG_CONVERSATION)) {
             mConversation = args.getParcelable(ARG_CONVERSATION);
-            getActivity().setTitle(mConversation.getTopic().getTitle());
+            getActivity().setTitle(mConversation.getTitle(getActivity()));
             mPointsMap = new HashMap<>();
             mPointsMap.put(mConversation.getUserAId(), 0);
             mPointsMap.put(mConversation.getUserBId(), 0);

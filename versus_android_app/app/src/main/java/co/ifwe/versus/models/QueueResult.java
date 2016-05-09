@@ -7,8 +7,6 @@ import android.text.TextUtils;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.UUID;
-
 import co.ifwe.versus.provider.VersusContract;
 
 public class QueueResult implements Parcelable, Content {

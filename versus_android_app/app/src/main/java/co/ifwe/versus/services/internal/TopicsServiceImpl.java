@@ -10,9 +10,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 import co.ifwe.versus.api.CategoriesApi;
-import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.models.Category;
 import co.ifwe.versus.models.Topic;
+import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.services.TopicsService;
 import co.ifwe.versus.services.VersusService;
 import co.ifwe.versus.utils.ContentOperationsBuilder;

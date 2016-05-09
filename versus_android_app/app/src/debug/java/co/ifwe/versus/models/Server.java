@@ -7,6 +7,9 @@ import java.util.List;
 
 public enum Server {
     STAGE("Stage", "versus-app.versus.3c8c6c32.svc.dockerapp.io"),
+    GENYMOTION("Genymotion", "192.168.56.1"),
+    TESTING("Testing", "192.168.0.199"),
+    HOME("Home", "192.168.0.14"),
     OTHER("Other", "");
 
     private String mName;

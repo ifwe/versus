@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
     >
 
@@ -62,6 +63,74 @@
             android:src="@drawable/ic_clear_24dp"
             style="@style/Button.FlexWidth"
             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/sslEnabledSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+
+            <RadioButton
+                android:id="@+id/https_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/https"
+                android:enabled="false"
+                />
+
+            <RadioButton
+                android:id="@+id/http_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/http"
+                android:enabled="false"
+                />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/endpoint_port"
+                android:maxLength="4"
+                android:typeface="monospace"
+                android:inputType="textUri|textNoSuggestions"
+                tools:text="8080"
+                />
+
+            <ImageButton
+                android:id="@+id/clear_port_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_clear_24dp"
+                style="@style/Button.FlexWidth"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 

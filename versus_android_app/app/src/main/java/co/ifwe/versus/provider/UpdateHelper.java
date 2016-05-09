@@ -6,8 +6,6 @@ import android.content.UriMatcher;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
-import com.crashlytics.android.Crashlytics;
-
 import java.util.ArrayList;
 
 import co.ifwe.versus.utils.DatabaseUtils;

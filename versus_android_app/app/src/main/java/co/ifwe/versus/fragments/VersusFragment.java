@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.res.ResourcesCompat;
 import android.text.TextUtils;
 import android.view.View;
@@ -31,7 +30,6 @@ import co.ifwe.versus.events.Bus;
 import co.ifwe.versus.events.MatchEvent;
 import co.ifwe.versus.events.MessageEvent;
 import co.ifwe.versus.models.ChatMessage;
-import co.ifwe.versus.models.QueueResult;
 
 public abstract class VersusFragment extends Fragment {
 

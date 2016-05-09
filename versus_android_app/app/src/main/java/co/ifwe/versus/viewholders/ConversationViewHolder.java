@@ -72,23 +72,23 @@ public class ConversationViewHolder extends CursorViewHolder {
                 case WIN:
                     backgroundColor = ResourcesCompat.getColor(resources, R.color.sea_blue_20, null);
                     textColor = ResourcesCompat.getColor(resources, R.color.sea_blue, null);
-                    resultText = "WIN";
+                    resultText = context.getString(R.string.conversation_win);
                     break;
                 case LOSS:
                     backgroundColor = ResourcesCompat.getColor(resources, R.color.salmon_20, null);
                     textColor = ResourcesCompat.getColor(resources, R.color.salmon, null);
-                    resultText = "LOSS";
+                    resultText = context.getString(R.string.conversation_loss);
                     break;
                 case DRAW:
                     backgroundColor = ResourcesCompat.getColor(resources, R.color.slate_20, null);
                     textColor = ResourcesCompat.getColor(resources, R.color.gunmetal, null);
-                    resultText = "DRAW";
+                    resultText = context.getString(R.string.conversation_draw);
                     break;
                 case NONE:
                 default:
                     backgroundColor = ResourcesCompat.getColor(resources, R.color.transparent, null);
                     textColor = ResourcesCompat.getColor(resources, R.color.gunmetal, null);
-                    resultText = "PENDING";
+                    resultText = context.getString(R.string.conversation_pending);
                     break;
             }
             itemView.setBackgroundColor(backgroundColor);

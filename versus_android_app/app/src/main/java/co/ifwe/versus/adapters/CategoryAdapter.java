@@ -3,21 +3,15 @@ package co.ifwe.versus.adapters;
 import android.content.Context;
 import android.database.Cursor;
 import android.support.annotation.LayoutRes;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 import co.ifwe.versus.models.Category;
 import co.ifwe.versus.recycler.adapter.RecyclerCursorAdapter;
 import co.ifwe.versus.utils.ViewUtils;
-import co.ifwe.versus.viewholders.ModelViewHolder;
+import co.ifwe.versus.viewholders.CategoryViewHolder;
 
-public class CategoryAdapter extends RecyclerCursorAdapter<ModelViewHolder<Category>> {
+public class CategoryAdapter extends RecyclerCursorAdapter<CategoryViewHolder> {
 
     protected Context mContext;
     protected OnItemClickListener mOnItemClickListener;
@@ -32,13 +26,13 @@ public class CategoryAdapter extends RecyclerCursorAdapter<ModelViewHolder<Categ
     }
 
     @Override
-    public ModelViewHolder<Category> onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = ViewUtils.inflate(parent.getContext(), mItemLayoutRes, parent, false);
-        return new ModelViewHolder<>(this, view);
+        return new CategoryViewHolder(this, view);
     }
 
     @Override
-    public void onBindViewHolderCursor(ModelViewHolder<Category> holder, Cursor cursor) {
+    public void onBindViewHolderCursor(CategoryViewHolder holder, Cursor cursor) {
         Category category = Category.fromCursor(cursor);
         holder.bind(category);
         holder.itemView.setOnClickListener(v -> {

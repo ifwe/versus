@@ -18,8 +18,8 @@
         >
 
         <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="25f93245e5e78d05f7285f7aa75eb3d9d7d3cb1e"
+            android:name="io.fabric.ApiKey"
+            android:value="78638d4427ce8f388a45f62c85ed694ebe4ee896"
             />
 
         <!-- PROVIDERS -->

@@ -1,6 +1,5 @@
 package co.ifwe.versus.modules;
 
-import co.ifwe.versus.modules.VersusModule;
 import co.ifwe.versus.views.EndpointView;
 import dagger.Module;
 

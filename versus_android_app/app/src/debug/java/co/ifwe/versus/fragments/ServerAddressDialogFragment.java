@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -29,6 +30,8 @@ public class ServerAddressDialogFragment extends DialogFragment {
 
     private Server mServer;
     private String mAddress;
+    private String mPort;
+    private boolean mSslEnabled;
 
     @Bind(R.id.preview)
     TextView mPreviewView;
@@ -38,6 +41,15 @@ public class ServerAddressDialogFragment extends DialogFragment {
 
     @Bind(R.id.clear_address_button)
     ImageButton mClearAddressButton;
+
+    @Bind(R.id.port)
+    EditText mPortEditText;
+
+    @Bind(R.id.clear_port_button)
+    ImageButton mClearPortButton;
+
+    @Bind(R.id.sslEnabledSelector)
+    RadioGroup mSslEnbaledSelector;
 
     @Bind(R.id.ok)
     Button mOkButton;
@@ -50,7 +62,7 @@ public class ServerAddressDialogFragment extends DialogFragment {
     private ServerAddressSelectListener mServerAddressSelectListener;
 
     public interface ServerAddressSelectListener {
-        void onEndpointSelected(String address);
+        void onEndpointSelected(boolean sslEnabled, String address, String port);
     }
 
     @Override
@@ -98,6 +110,17 @@ public class ServerAddressDialogFragment extends DialogFragment {
             mAddress = "";
         }
 
+        mSslEnbaledSelector.setOnCheckedChangeListener((group, checkedId) -> {
+            switch(checkedId) {
+                case R.id.https_button:
+                    mSslEnabled = true;
+                    break;
+                case R.id.http_button:
+                    mSslEnabled = false;
+                    break;
+            }
+        });
+
         updatePreview();
     }
 
@@ -125,6 +148,12 @@ public class ServerAddressDialogFragment extends DialogFragment {
         mAddress = "";
     }
 
+    @OnClick(R.id.clear_port_button)
+    void onClearPort() {
+        mPortEditText.setText(null);
+        mPort = "8080";
+    }
+
     @OnItemClick(R.id.server_list_view)
     void onListedServerClick(int position) {
         mListView.setItemChecked(position, true);
@@ -136,11 +165,10 @@ public class ServerAddressDialogFragment extends DialogFragment {
         updatePreview();
     }
 
-
     @OnClick(R.id.ok)
     void onSetEndpoint() {
         if (mServerAddressSelectListener != null) {
-            mServerAddressSelectListener.onEndpointSelected(getServerAddress());
+            mServerAddressSelectListener.onEndpointSelected(mSslEnabled, getServerAddress(), mPort);
         }
         dismiss();
     }
@@ -160,9 +188,12 @@ public class ServerAddressDialogFragment extends DialogFragment {
     }
 
     private String getPreviewAddress() {
-        StringBuilder builder = new StringBuilder("http://");
+        StringBuilder builder = new StringBuilder();
+        builder.append(mSslEnabled ? "https" : "http");
+        builder.append("://");
         builder.append(getServerAddress());
-        builder.append(":8080");
+        builder.append(":");
+        builder.append(TextUtils.isEmpty(mPort) ? "8080" : mPort);
         return builder.toString();
     }
 
@@ -176,6 +207,14 @@ public class ServerAddressDialogFragment extends DialogFragment {
 
     public void setServer(String server) {
         mAddress = server;
+    }
+
+    public void setPort(String port) {
+        mPort = port;
+    }
+
+    public void setSslEnabled(boolean sslEnabled) {
+        mSslEnabled = sslEnabled;
     }
 
 }

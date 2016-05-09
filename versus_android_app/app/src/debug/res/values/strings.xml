@@ -6,4 +6,8 @@
     <string name="endpoint_server_address">Server Address</string>
     <string name="endpoint_server_address_hint">Address</string>
     <string name="endpoint_server">Server</string>
+    <string name="endpoint_port">Port</string>
+
+    <string name="drawer_debug">Debug Drawer</string>
+    <string name="drawer_clear_database">Clear Database</string>
 </resources>

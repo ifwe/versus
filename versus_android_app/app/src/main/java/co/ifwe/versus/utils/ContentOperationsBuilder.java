@@ -13,8 +13,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.models.Content;
+import co.ifwe.versus.provider.VersusContract;
 
 public class ContentOperationsBuilder {
 

@@ -20,9 +20,6 @@ import co.ifwe.versus.provider.VersusContract;
 import co.ifwe.versus.services.VersusService;
 import co.ifwe.versus.services.callbacks.PubnubCallback;
 
-/**
- * Created by schoi on 4/23/16.
- */
 public class PubnubUtils {
 
     private static final String TAG = PubnubUtils.class.getCanonicalName();

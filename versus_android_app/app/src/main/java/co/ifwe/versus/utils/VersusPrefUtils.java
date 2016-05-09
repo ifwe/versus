@@ -8,7 +8,9 @@ import co.ifwe.versus.models.User;
 
 public class VersusPrefUtils {
     private static final String KEY_USER_ID = "user_id";
+    private static final String KEY_SSL_ENABLED = "ssl_enabled";
     private static final String KEY_SERVER = "server";
+    private static final String KEY_PORT = "port";
     private static final String KEY_USER_NAME = "user_name";
     private static final String KEY_USER_ENERGY = "user_energy";
     private static final String KEY_USER_NEXT_ENERGY_UPDATE = "user_last_energy_update";
@@ -29,6 +31,17 @@ public class VersusPrefUtils {
         saveUserId(preferences, null);
     }
 
+    public static void saveSslEnabled(SharedPreferences preferences, boolean sslEnabled) {
+        preferences.edit().putBoolean(KEY_SSL_ENABLED, sslEnabled).commit();
+    }
+
+    public static boolean getSslEnabled(SharedPreferences preferences) {
+        if (preferences.contains(KEY_SSL_ENABLED)) {
+            return preferences.getBoolean(KEY_SSL_ENABLED, false);
+        }
+        return false;
+    }
+
     public static void saveServer(SharedPreferences preferences, String server) {
         preferences.edit().putString(KEY_SERVER, server).commit();
     }
@@ -39,6 +52,18 @@ public class VersusPrefUtils {
         }
         return AppConfig.SERVER;
     }
+
+    public static void savePort(SharedPreferences preferences, String port) {
+        preferences.edit().putString(KEY_PORT, port).commit();
+    }
+
+    public static String getPort(SharedPreferences preferences) {
+        if (preferences.contains(KEY_PORT)) {
+            return preferences.getString(KEY_PORT, "8080");
+        }
+        return "8080";
+    }
+
 
     public static void saveUser(SharedPreferences preferences, User user) {
         preferences.edit()

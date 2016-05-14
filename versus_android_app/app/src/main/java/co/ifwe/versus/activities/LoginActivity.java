@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -30,6 +32,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import co.ifwe.versus.R;
 import co.ifwe.versus.models.User;
+import co.ifwe.versus.models.VersionResponse;
 import co.ifwe.versus.services.AppService;
 import co.ifwe.versus.services.AuthService;
 import co.ifwe.versus.services.SubscribeService;
@@ -89,6 +92,40 @@ public class LoginActivity extends VersusActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        mAppService.checkVersion(new StubCallback<VersionResponse>() {
+            @Override
+            public void onSuccess(VersionResponse versionResponse) {
+                super.onSuccess(versionResponse);
+                if (versionResponse.isUpdateRequired()) {
+                    Log.e(TAG, "App out of date");
+                    showUpdateDialog();
+                } else {
+                    checkFacebookLogin();
+                }
+            }
+
+            @Override
+            public void onError(int errorCode) {
+                super.onError(errorCode);
+                checkFacebookLogin();
+            }
+        });
+    }
+
+    private void showUpdateDialog() {
+        mLoginButton.setVisibility(View.VISIBLE);
+        new MaterialDialog.Builder(LoginActivity.this)
+                .content(R.string.update_required)
+                .positiveText(R.string.update_required_ok)
+                .onPositive((dialog, which) -> {
+                    goToPlayStore();
+                })
+                .cancelable(false)
+                .canceledOnTouchOutside(false)
+                .show();
+    }
+
+    private void checkFacebookLogin() {
         AccessToken token = AccessToken.getCurrentAccessToken();
         Profile profile = Profile.getCurrentProfile();
         if (token == null || profile == null) {
@@ -96,29 +133,6 @@ public class LoginActivity extends VersusActivity {
         } else {
             loginUser();
         }
-//        mAppService.checkConnection(new StubCallback<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                super.onSuccess(aVoid);
-//            }
-//
-//            @Override
-//            public void onError(int errorCode) {
-//                super.onError(errorCode);
-//                Toast.makeText(LoginActivity.this, "Cannot connect to server", Toast.LENGTH_LONG).show();
-//            }
-//        });
-    }
-
-    void showUpdateDialog() {
-        mLoginButton.setVisibility(View.VISIBLE);
-        new MaterialDialog.Builder(this)
-                .canceledOnTouchOutside(false)
-                .cancelable(false)
-                .positiveText("Go to Play Store")
-                .content("Update required")
-                .onPositive((dialog, which) -> goToPlayStore())
-                .show();
     }
 
     void goToPlayStore() {

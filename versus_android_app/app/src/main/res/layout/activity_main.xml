@@ -81,14 +81,20 @@
             android:background="@color/dividerColor"
             />
 
-        <ListView
-            android:id="@+id/drawer_bottom_list"
+        <TextView
+            android:id="@+id/logout_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="0dp"
-            android:scrollbars="none"
-            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:drawablePadding="16dp"
+            android:textColor="@color/menuIconColor"
+            android:drawableTint="@color/menuIconColor"
+            android:text="@string/drawer_item_logout"
+            android:drawableLeft="@drawable/ic_power_settings_new_24px"
+            android:drawableStart="@drawable/ic_power_settings_new_24px"
+            android:background="?android:attr/listChoiceBackgroundIndicator"
             />
 
     </LinearLayout>

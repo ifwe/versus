@@ -55,6 +55,9 @@
     <string name="login_error_facebook">Sorry, there was an error connecting with Facebook. Please try again later.</string>
     <string name="login_error_ok">OK</string>
 
+    <string name="update_required">An important update is available.  Please update Versus to continue using the app.</string>
+    <string name="update_required_ok">Go to Play Store</string>
+
     <string name="main_logout_message">Are you sure you want to sign out of Versus?</string>
     <string name="main_logout_yes">Yes</string>
     <string name="main_logout_no">No</string>

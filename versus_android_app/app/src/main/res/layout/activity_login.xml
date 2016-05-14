@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/splashBackground"
@@ -16,52 +15,46 @@
         android:layout_gravity="top|center_horizontal"
         android:layout_marginTop="8dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-
     <ImageView
         android:id="@+id/logo_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
         android:contentDescription="@string/app_name"
         app:srcCompat="@drawable/ic_logo"
         tools:src="@drawable/ic_logo"
         />
 
-        <FrameLayout
-            android:layout_width="288dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="24dp"
-            >
+    <FrameLayout
+        android:layout_width="288dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="128dp"
+        >
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
 
-            <Button
-                android:id="@+id/login_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp"
-                android:drawableStart="@drawable/wrapper_ic_facebook"
-                android:drawableLeft="@drawable/wrapper_ic_facebook"
-                android:drawablePadding="16dp"
-                android:text="@string/splash_button_login"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:background="@color/facebook"
-                android:visibility="invisible"
-                style="@style/Button.Facebook"/>
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:drawableStart="@drawable/wrapper_ic_facebook"
+            android:drawableLeft="@drawable/wrapper_ic_facebook"
+            android:drawablePadding="16dp"
+            android:text="@string/splash_button_login"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@color/facebook"
+            android:visibility="invisible"
+            style="@style/Button.Facebook"
+            tools:visibility="visible"/>
 
-        </FrameLayout>
-
-    </LinearLayout>
+    </FrameLayout>
 
 </FrameLayout>

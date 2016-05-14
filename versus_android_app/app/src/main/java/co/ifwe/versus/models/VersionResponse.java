@@ -9,7 +9,7 @@ public class VersionResponse {
     @SerializedName("name")
     private String mName;
 
-    @SerializedName("update_required")
+    @SerializedName("upgrade_required")
     private boolean mUpdateRequired;
 
     public VersionResponse() {

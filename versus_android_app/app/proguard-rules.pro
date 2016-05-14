@@ -195,7 +195,7 @@
 -keep class co.ifwe.versus.models.** { *; }
 -keep class co.ifwe.versus.services.**
 -keep class **.CursorPagerAdapter
--keep class co.ifwe.fragments.**$* { *; }
+-keep class co.ifwe.versus.fragments.**$* { *; }
 -keep public class * extends com.tagged.caspr.ICasprService { *; }
 
 # Glide

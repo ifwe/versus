@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -36,7 +40,9 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnItemClick;
+import co.ifwe.versus.BuildConfig;
 import co.ifwe.versus.R;
 import co.ifwe.versus.adapters.ShelfAdapter;
 import co.ifwe.versus.fragments.ConversationListFragment;
@@ -91,8 +97,8 @@ public class MainActivity extends VersusActivity
     @Bind(R.id.left_drawer)
     ListView mDrawerList;
 
-    @Bind(R.id.drawer_bottom_list)
-    ListView mBottomList;
+    @Bind(R.id.logout_text_view)
+    TextView mLogoutView;
 
     @Bind(R.id.profile_image_view)
     ImageView mProfileImageView;
@@ -157,10 +163,15 @@ public class MainActivity extends VersusActivity
         mShelfAdapter = new ShelfAdapter(this, shelfItems);
         mDrawerList.setAdapter(mShelfAdapter);
 
-        List<ShelfItem> bottomItems = new ArrayList<>();
-        bottomItems.add(ShelfItem.LOGOUT);
-        ShelfAdapter bottomAdapter = new ShelfAdapter(this, bottomItems);
-        mBottomList.setAdapter(bottomAdapter);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_power_settings_new_24px, null);
+            drawable.setColorFilter(ResourcesCompat.getColor(getResources(), R.color.menuIconColor, null), PorterDuff.Mode.SRC_IN);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                mLogoutView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, null, null, null);
+            } else {
+                mLogoutView.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
+            }
+        }
 
         FragmentUtils.addSingle(this, ConversationListFragment.createState(true), R.id.content_frame);
         getSupportLoaderManager().initLoader(WIN_LOSS_LOADER_ID, null, this);
@@ -173,9 +184,8 @@ public class MainActivity extends VersusActivity
         mDrawerLayout.closeDrawer(GravityCompat.START);
     }
 
-    @OnItemClick(R.id.drawer_bottom_list)
+    @OnClick(R.id.logout_text_view)
     void onLogoutClick() {
-        //TODO: Make string res
         new MaterialDialog.Builder(this)
                 .content(R.string.main_logout_message)
                 .positiveText(R.string.main_logout_yes)
